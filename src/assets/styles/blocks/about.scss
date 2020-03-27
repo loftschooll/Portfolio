@@ -1,0 +1,266 @@
+section.about{
+    min-height: 815px;
+    width: 100%;
+    position: relative;
+    background: url("../images/main-works.png") center center no-repeat;
+    background-size: cover;
+}
+section.about_title{
+    min-height: 1015px;
+    width: 100%;
+    position: relative;
+    background: #f1efe7;
+    shape-outside: polygon(0 0,0 100%,100% 100%,100% 0,50% 160px);
+    clip-path: polygon(0 0,0 100%,100% 100%,100% 0,50% 160px);
+    margin-top: -160px;
+    display: flex;
+}
+.about_user{
+    width: 50%;
+    margin-top: 180px;
+    display: flex;
+    align-items: flex-start;
+}
+.about_user-title{
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+svg.about_user-icons_item{
+    fill: #fff;
+    opacity: 0.6;
+    transform: rotate(180deg);
+    position: absolute;
+    z-index: 0;
+}
+h2.works_stars-title{
+    //@include sansuswebissi;
+    font-family: 'Roboto', Helvetica, sans-serif;
+	font-size: 63px;
+    color: #474b57;
+    z-index: 1;
+}
+.about_user-block{
+    width: 55%;
+    height: 100%;
+}
+.about_user-photo  {
+    width: 95%;
+    height: 35%;
+    background: url("../images/avatar-about.png") right center no-repeat;
+    background-size: cover;
+}
+.about_user-text{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+h3.about_user-text_what{
+    //@include sansuswebissi;
+    font-family: 'Roboto', Helvetica, sans-serif;
+	font-size: 35px;
+    color: #474b57;
+    margin: 30px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    text-transform: uppercase;
+}
+h3.about_user-text_what:after{
+    content: "";
+    width: 90px;
+    height: 3px;
+    background: #9c9d9f;
+    margin-top: 30px;
+}
+.about_user-text_title{
+    width: 95%;
+}
+p.about_user-text_item{
+    //@include Roboto-Regular;
+    font-family: 'Roboto', Helvetica, sans-serif;
+	font-size: 16px;
+    color: #474b57;
+    line-height: 1.7;
+}
+.about_skills{
+    width: 50%;
+    margin-top: 180px;
+}
+.about_skills-block_text{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+h3.about_skills-text{
+    //@include SansusWebissi;
+    font-family: 'Roboto', Helvetica, sans-serif;
+	font-size: 35px;
+    color: #474b57;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    width: 50%;
+    text-align: center;
+    line-height: 1.2;
+}
+h3.about_skills-text:after{
+    content: "";
+    width: 90px;
+    height: 3px;
+    background: #474b57;
+    margin-top: 30px;
+}
+p.about_skills-text_title{
+    font-family: 'Roboto-Regular', Helvetica, sans-serif;
+	font-size: 16px;
+    color: #474b57;
+    margin: 30px 0 30px 40px;
+}
+ul.about_skills-main{
+    padding: 0 0 0 40px;
+    margin: 30px 0;
+    list-style-type: none;
+}
+h3.about_skills-main_name{
+    font-family: 'Roboto-Medium', Helvetica, sans-serif;
+	font-size: 28px;
+    color: #474b57;
+    margin: 20px 0;
+}
+.about_skills-circles{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.about_skills-block_circle{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+svg.about_skills-percentage{
+    display: inline-block;
+    width: 120px;
+    height: 120px;
+    margin-right: 40px;
+    transform: rotate(-90deg);
+}
+circle.circle{
+    fill: transparent;
+    stroke-width: 15px;
+    stroke: #dfdcd5;
+}
+circle.circle_above{
+    stroke: #1056d1;
+    stroke-dasharray: 251;
+    stroke-dashoffset: 251;
+    animation: fill 100s linear infinite;
+    animation-play-state: paused;
+}
+circle.circle_above[style="animation-delay: -100s"] {
+    animation: initial;
+    stroke-dashoffset: 0;
+}
+@keyframes fill {
+    from {
+        stroke-dashoffset: 251;
+    }
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+h4.about_skills-circle_name{
+    font-family: 'Roboto-Medium', Helvetica, sans-serif;
+	font-size: 14px;
+    color: #243994;
+    margin: 0;
+    position: absolute;
+    margin-left: -40px;
+    width: 48%;
+    text-align: center;
+}
+section.about_map{
+    width: 100%;
+    min-height: 700px;
+    background: url("../images/Map.png") right center no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.about_contact{
+    width: 580px;
+    height: 285px;
+    margin: 0;
+    background: rgba(251, 251, 251, 0.7);
+    position: absolute;
+    left: 30%;
+    top: 15%;
+}
+h3.about_contact-text{
+    font-family: 'Roboto-Medium', Helvetica, sans-serif;
+	font-size: 35px;
+    color: #474b57;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h3.about_contact-text:after{
+    content: "";
+    width: 90px;
+    height: 3px;
+    background: #474b57;
+    margin-top: 30px;
+}
+ul.about_contact-items{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    justify-content: center;
+    min-height: 200px;
+    align-items: center;
+}
+li.about_contact-item{
+    width: 260px;
+    height: 65px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.about_contact-icon_skype{
+    width: 45px;
+    height: 45px;
+    background: url("../images/icons/skype_n.svg") right center no-repeat;
+    background-size: cover;
+}
+.about_contact-icon_phone{
+    width: 45px;
+    height: 45px;
+    background: url("../images/icons/phone_n.svg") right center no-repeat;
+    background-size: cover;
+}
+.about_contact-icon_mail{
+    width: 45px;
+    height: 45px;
+    background: url("../images/icons/envelope_n.svg") right center no-repeat;
+    background-size: cover;
+}
+.about_contact-icon_map{
+    width: 49px;
+    height: 45px;
+    background: url("../images/icons/map_n.svg") right center no-repeat;
+    background-size: cover;
+}
+p.about_contact-item_skype{
+    font-family: 'Roboto-Medium', Helvetica, sans-serif;
+	font-size: 16px;
+    color: #474b57;
+    margin-left: 10px;
+}

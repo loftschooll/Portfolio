@@ -1,0 +1,55 @@
+extends ../main.layout.pug
+
+block variables
+    - var title = 'Блог'
+
+block content
+    section.blog
+        .works_header
+            .works_header-icons
+                a(href='#')
+                    svg.works_header-icons_item(width='32', height='28', viewBox="0 0 548.358 548.358")
+                        use(xlink:href='assets/styles/sprate.svg#vk')
+                a(href='#')
+                    svg.works_header-icons_item(width='27', height='23', viewBox="0 0 475.084 475.084")
+                        use(xlink:href='assets/styles/sprate.svg#github')
+                a(href='#')
+                    svg.works_header-icons_item(width='27', height='20', viewBox="0 0 512 512")
+                        use(xlink:href='assets/styles/sprate.svg#linkedin')
+            .works_header-burger
+                img.works_header-hamburger(src="assets/images/hamburger.png", alt="hamburger")
+        .works_user
+            .works_user-stars
+                svg.works_user-icons_item(width="470px" height="270px" viewBox="0 0 186.861 110.966")
+                    use(xlink:href='assets/styles/sprate.svg#stars')
+                .works_user-stars_avatar
+                    .user_pic
+                        img.user__pic-img
+                    .user__description
+                        .user__name-blog Блог
+                        .user__ingo Статьи, которые я написал
+    section.blog_main
+        .blog_main-title
+            ul.blog_main-title_items
+                li.blog_main-title_item.active
+                    a(href="").blog_main-title_link.active Самое важное в SASS
+                li.blog_main-title_item
+                    a(href="").blog_main-title_link Приёмы в верстке, без которых не обходится ни один сайт
+                li.blog_main-title_item
+                    a(href="").blog_main-title_link Самый необходимый набор Gulp плагинов
+                li.blog_main-title_item
+                    a(href="").blog_main-title_link Почему я выбрал Jade
+        .blog_main-text
+            ul.blog_main-text_items
+                li.blog_main-text_item
+                    h3.blog_main-text_name Самое важное в SASS
+                    p.blog_main-text_date 22 ноября 2016
+                    p.blog_main-text_write Таким образом начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке направлений прогрессивного развития. Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании новых предложений. Товарищи! новая модель организационной деятельности играет важную роль в формировании систем массового участия.
+                    p.blog_main-text_write Не следует, однако забывать, что укрепление и развитие структуры обеспечивает широкому кругу (специалистов) участие в формировании систем массового участия. Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач. Товарищи! постоянный количественный рост и сфера нашей активности способствует подготовки и реализации модели развития. С другой стороны рамки и место обучения кадров влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.
+                    .blog_main-text_photo
+                li.blog_main-text_item
+                    h3.blog_main-text_name Приёмы в вёрстке, без которых не обходится ни один сайт
+                    p.blog_main-text_date 13 ноября 2017
+                    p.blog_main-text_write Таким образом начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке направлений прогрессивного развития. Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании новых предложений. Товарищи! новая модель организационной деятельности играет важную роль в формировании систем массового участия.
+                    p.blog_main-text_write Не следует, однако забывать, что укрепление и развитие структуры обеспечивает широкому кругу (специалистов) участие в формировании систем массового участия. Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач. Товарищи! постоянный количественный рост и сфера нашей активности способствует подготовки и реализации модели развития. С другой стороны рамки и место обучения кадров влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.
+    include ../common/footer.pug

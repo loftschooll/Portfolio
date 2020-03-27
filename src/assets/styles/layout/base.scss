@@ -1,0 +1,19 @@
+body, html {
+    height: 100%;
+}
+body {
+    font-family: 'Roboto', Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.42;
+    color: #455a64;
+}
+.wrapper {
+    overflow: hidden;
+    min-height: 100%;
+    position: relative;
+    width: 100%;
+}
+.container {
+    margin: 0 auto;
+    width: 95%;
+}

@@ -1,0 +1,31 @@
+extends ../auth.layout.pug
+
+block content
+    .auth__block
+        .auth__block-button
+            a(href="").auth__block-admin Авторизоваться
+        .auth__block-content
+            .auth__block-user
+                .user.user_color_grey
+                    .user_pic
+                        img.user__pic-img
+                    .user__description
+                        .user__name Владимир Астахов
+                        .user__ingo Личный сайт разработчика
+            .auth__block-socials
+                a(href='#')
+                    svg.auth_block-socials_item(width='32', height='28', viewBox="0 0 548.358 548.358")
+                        use(xlink:href='assets/styles/sprate.svg#vk')
+                a(href='#')
+                    svg.auth_block-socials_item(width='27', height='23', viewBox="0 0 475.084 475.084")
+                        use(xlink:href='assets/styles/sprate.svg#github')
+                a(href='#')
+                    svg.auth_block-socials_item(width='27', height='20', viewBox="0 0 512 512")
+                        use(xlink:href='assets/styles/sprate.svg#linkedin')
+            .auth__block-buttons
+                a(href="my-works.html").buttons_auth.auth_works Мои работы
+                a(href="about.html").buttons_auth.auth_about Обо мне
+                a(href="blog.html").buttons_auth.auth_block Блог
+        .auth__footer
+            p.auth__footer-text © Владимир Астахов | создано с любовью в LoftSchool | 2016
+    

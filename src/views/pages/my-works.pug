@@ -1,0 +1,98 @@
+extends ../main.layout.pug
+
+block variables
+    - var title = 'Мои работы'
+
+block content
+    section.works
+        .works_header
+            .works_header-icons
+                a(href='#')
+                    svg.works_header-icons_item(width='32', height='28', viewBox="0 0 548.358 548.358")
+                        use(xlink:href='assets/styles/sprate.svg#vk')
+                a(href='#')
+                    svg.works_header-icons_item(width='27', height='23', viewBox="0 0 475.084 475.084")
+                        use(xlink:href='assets/styles/sprate.svg#github')
+                a(href='#')
+                    svg.works_header-icons_item(width='27', height='20', viewBox="0 0 512 512")
+                        use(xlink:href='assets/styles/sprate.svg#linkedin')
+            .works_header-burger
+                img.works_header-hamburger(src="assets/images/hamburger.png", alt="hamburger")
+        .works_user
+            .works_user-stars
+                svg.works_user-icons_item(width="470px" height="270px" viewBox="0 0 186.861 110.966")
+                    use(xlink:href='assets/styles/sprate.svg#stars')
+                .works_user-stars_avatar
+                    .user_pic
+                        img.user__pic-img
+                    .user__description
+                        .user__name Владимир Астахов
+                        .user__ingo Личный сайт разработчика
+        a.works_down-scroll(href="")
+            svg.works_down-icons_item(width="35px" height="35px" viewBox="0 0 25.16 16.164")
+                use(xlink:href='assets/styles/sprate.svg#arrow-down')
+        .works_stars
+            svg.works_stars-icons_item(width="230px" height="200px" viewBox="0 0 171.5 132.5")
+                use(xlink:href='assets/styles/sprate.svg#starss')
+            h2.works_stars-title Мои работы
+    section.works_block
+        .works_block-title
+            h3.works_block-text Сайт школы онлайн образования
+            h4.works_block-text_name html, css, javascript
+            a(href="").works_block-text_button
+                .works_block-button_icon
+                    svg.works_block-button_link(width="22px" height="22px" viewBox="0 0 19.125 19.125")
+                        use(xlink:href='assets/styles/sprate.svg#link')
+                p.works_block-button_text Посмотреть сайт
+        .works_block-img
+            .works_block-photo
+                .works_block-photo_title
+            .works_block-slide
+                .works_block-slide_left
+                    .works_block-photo_left
+                    .works_block-icon_left
+                        svg.works_block-icon_down(width="35px" height="35px" viewBox="0 0 25.16 16.164")
+                            use(xlink:href='assets/styles/sprate.svg#arrow-down')
+                .works_block-slide_right
+                    .works_block-photo_right
+                    .works_block-icon_right
+                        svg.works_block-icon_up(width="35px" height="35px" viewBox="0 0 25.16 16.164")
+                            use(xlink:href='assets/styles/sprate.svg#arrow-down')
+    section.works_speak
+        .works_speak-block
+            .works_speak-title
+                .works_speak-title_icon
+                    svg.works_speak-icons_item(width="260px" height="220px" viewBox="0 0 171.5 132.5")
+                        use(xlink:href='assets/styles/sprate.svg#starsss')
+                    h2.works_speak-title_text Что обо мне говорят
+            .works_speak-slider
+                .works_speak-slider_title
+                    .works_speak-block_photo
+                        img.works_speak-slider_photo
+                    p.works_speak_slider_text Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+                    p.works_speak_slider_name Ковальчук Дмитрий
+                        p.works_speak-bonus — основатель Loftschool
+                .works_speak-slider_title
+                    .works_speak-block_photo
+                        img.works_speak-slider_photo-1
+                    p.works_speak_slider_text Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+                    p.works_speak_slider_name Сабанцев Владимир 
+                        p.works_speak-bonus — преподаватель
+            .works_speak-link
+                h3.works_speak-link_text Связаться со мной
+                form.works_speak-data
+                    .works_speak-form_name
+                        label
+                            input.works_speak-data_name(type="text" name="name" placeholder="Ваше имя" required)
+                    .works_speak-form_name
+                        label
+                            input.works_speak-data_name(type="text" name="email" placeholder="Ваш email" required)
+                    .works_speak-form_name
+                        textarea(name="comment", type="text", placeholder="Ваше сообщение")
+                .works_speak-link_buttons
+                    a.works_speak-link_send(href="") Отправить
+                    a.works_speak-link_clean(href="") Очистить
+            a.works_speak-up(href="")
+                svg.works_up-icons_item(width="35px" height="35px" viewBox="0 0 25.16 16.164")
+                    use(xlink:href='assets/styles/sprate.svg#arrow-down')
+        include ../common/footer.pug

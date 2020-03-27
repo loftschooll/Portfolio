@@ -1,0 +1,115 @@
+section.blog{
+    min-height: 600px;
+    width: 100%;
+    position: relative;
+    background: url("../images/main-works.png") center center no-repeat;
+    background-size: cover;
+}
+.user__name-blog{
+    //@include sansuswebissi;
+    font-family: 'Roboto', Helvetica, sans-serif;
+	font-size: 63px;
+    color: #fff;
+    margin: 0;
+}
+section.blog_main{
+    width: 100%;
+    min-height: 1330px;
+    background: #faf8f0;
+    position: relative;
+    shape-outside: polygon(0 0,0 100%,100% 100%,100% 0,50% 150px);
+    clip-path: polygon(0 0,0 100%,100% 100%,100% 0,50% 150px);
+    margin-top: -150px;
+    display: flex;
+}
+.blog_main-title{
+    width: 25%;
+    min-height: 100%;
+    margin-top: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+ul.blog_main-title_items{
+    position: sticky;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding: 0;
+    margin: 0;
+    width: 95%;
+}
+li.blog_main-title_item{
+    height: 50px;
+    text-align: right;
+    padding-right: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+li.active{
+    border-right: 3px solid #083c96;
+}
+a.blog_main-title_link{
+    text-decoration: none;
+    //@include sansuswebissi;
+    font-family: 'Roboto', Helvetica, sans-serif;
+	font-size: 16px;
+    color: #455a64;
+    margin: 0;
+}
+a.active{
+    color: #083c96;
+    font-weight: bold;
+}
+.blog_main-text{
+    width: 75%;
+    height: 100%;
+    margin-top: 220px;
+}
+ul.blog_main-text_items{
+    list-style-type: none;
+    padding: 0;
+    margin: 0 100px;
+}
+li.blog_main-text_item{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 70px;
+    border-bottom: 5px solid #ecebe4;
+    padding-bottom: 70px;
+}
+li.blog_main-text_item:last-child{
+    border: none;
+}
+h3.blog_main-text_name{
+    //@include sansuswebissi;
+    font-family: 'Roboto', Helvetica, sans-serif;
+	font-size: 35px;
+    color: #474b57;
+    margin: 0;
+}
+p.blog_main-text_date{
+    //@include sansuswebissi;
+    font-family: 'Roboto-Regular', Helvetica, sans-serif;
+	font-size: 16px;
+    color: #083c96;
+    margin: 20px 0;
+}
+p.blog_main-text_write{
+    //@include sansuswebissi;
+    font-family: 'Roboto-Regular', Helvetica, sans-serif;
+	font-size: 16px;
+    color: #455a64;
+    margin: 0 0 20px 0;
+    line-height: 1.7;
+}
+.blog_main-text_photo{
+    height: 130px;
+    width: 900px;
+    background: url("../images/cod-blog.png") center center no-repeat;
+    background-size: cover;
+}
