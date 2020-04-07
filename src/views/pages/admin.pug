@@ -1,0 +1,190 @@
+extends ../admin.layout.pug
+
+block content
+    .admin__blocks
+        .admin_title
+            h3.admin_title-text Панель администрирования
+            a(href="index.html").admin_tilte-link Вернуться на сайт
+        .admin_tabs
+            input(id="tab1", type="radio", name="tabs", checked="").admin_tabs-input
+            label(for="tab1" title="Обо мне").admin_tabs-label Обо мне
+
+            input(id="tab2", type="radio", name="tabs").admin_tabs-input
+            label(for="tab2" title="Блог").admin_tabs-label Блог
+
+            input(id="tab3", type="radio", name="tabs").admin_tabs-input
+            label(for="tab3" title="Мои работы").admin_tabs-label Мои работы
+
+            section#content-tab1
+                h3.admin_about Страница "Обо мне"
+                .admin_about-title_block
+                    .admin_about-block
+                        h4.admin_about-block-title Frontend
+                        ul.admin_about-items
+                            li.admin_about-item
+                                h4.admin_about-item_name Html
+                                input.admin_about-item_number(type="text")
+                                p.admin_about-item_text %
+                                .admin_about-item_edit
+                                .admin_about-item_clean
+                            li.admin_about-item
+                                h4.admin_about-item_name CSS
+                                input.admin_about-item_number(type="text")
+                                p.admin_about-item_text %
+                                .admin_about-item_edit
+                                .admin_about-item_clean
+                            li.admin_about-item
+                                h4.admin_about-item_name JavaScript
+                                input.admin_about-item_number(type="text")
+                                p.admin_about-item_text %
+                                .admin_about-item_edit
+                                .admin_about-item_clean
+                        .admin_about-create
+                            label.admin_about-create_label
+                                input.admin_about-create_input(type="text", name="create", placeholder="Название")
+                            a(href="").admin_about-create_button Добавить
+                    .admin_about-block
+                        h4.admin_about-block-title Backend
+                        ul.admin_about-items
+                            li.admin_about-item
+                                h4.admin_about-item_name PHP
+                                input.admin_about-item_number(type="text")
+                                p.admin_about-item_text %
+                                .admin_about-item_edit
+                                .admin_about-item_clean
+                            li.admin_about-item
+                                h4.admin_about-item_name Node.js
+                                input.admin_about-item_number(type="text")
+                                p.admin_about-item_text %
+                                .admin_about-item_edit
+                                .admin_about-item_clean
+                            li.admin_about-item
+                                h4.admin_about-item_name Mongo.db
+                                input.admin_about-item_number(type="text")
+                                p.admin_about-item_text %
+                                .admin_about-item_edit
+                                .admin_about-item_clean
+                        .admin_about-create
+                            label.admin_about-create_label
+                                input.admin_about-create_input(type="text", name="create", placeholder="Название")
+                            a(href="").admin_about-create_button Добавить
+                    .admin_about-block
+                        h4.admin_about-block-title Workflow
+                        ul.admin_about-items
+                            li.admin_about-item
+                                h4.admin_about-item_name Git
+                                input.admin_about-item_number(type="text")
+                                p.admin_about-item_text %
+                                .admin_about-item_edit
+                                .admin_about-item_clean
+                            li.admin_about-item
+                                h4.admin_about-item_name Gulp
+                                input.admin_about-item_number(type="text")
+                                p.admin_about-item_text %
+                                .admin_about-item_edit
+                                .admin_about-item_clean
+                            li.admin_about-item
+                                h4.admin_about-item_name Bower
+                                input.admin_about-item_number(type="text")
+                                p.admin_about-item_text %
+                                .admin_about-item_edit
+                                .admin_about-item_clean
+                        .admin_about-create
+                            label.admin_about-create_label
+                                input.admin_about-create_input(type="text", name="create", placeholder="Название")
+                            a(href="").admin_about-create_button Добавить
+            section#content-tab2
+                .admin_blog
+                    .admin_blog-create
+                        h3.admin_blog-create_name Страница "Блог"
+                        .admin_blog-create_block
+                            h3.admin_blog-block_create Добавить запись
+                            label.admin_blog-block_name
+                                input.admin_blog-block_title(type="text", name="name", placeholder="Название")
+                            label.admin_blog-block_name
+                                input.admin_blog-data_number(type="date", name="date", placeholder="Дата")
+                            textarea.admin_blog-text(name="", cols="30", rows="10")
+                            a.admin_blog-text_button(href="") Добавить
+                    .admin_blog-last
+                        h3.admin_blog-last_name Последние записи
+                        table.admin_blog-table
+                            tr.admin_blog-caption
+                                th.admin_blog-caption_title-1 Название
+                                th.admin_blog-caption_title-2 Дата
+                                th.admin_blog-caption_title-3 Содержание
+                                th.admin_blog-caption_title-4 Edit/Delete
+                            tr.admin_blog-items-1
+                                td.admin_blog-item-1 Мой третий сайт
+                                td.admin_blog-item-2 22.06.19
+                                td.admin_blog-item-3 Таким образом начало повседневной работы по формированию позиции...
+                                td.admin_blog-item
+                                    a.admin_blog-button_edit(href="")
+                                    a.admin_blog-button_delete(href="")
+                            tr.admin_blog-items-2
+                                td.admin_blog-item-1 Мой второй сайт
+                                td.admin_blog-item-2 22.06.19
+                                td.admin_blog-item-3 Таким образом начало повседневной работы по формированию позиции...
+                                td.admin_blog-item 
+                                    a.admin_blog-button_edit(href="")
+                                    a.admin_blog-button_delete(href="")
+                            tr.admin_blog-items-3
+                                td.admin_blog-item-1 Мой первый сайт
+                                td.admin_blog-item-2 22.06.19
+                                td.admin_blog-item-3 Таким образом начало повседневной работы по формированию позиции...
+                                td.admin_blog-item 
+                                    a.admin_blog-button_edit(href="")
+                                    a.admin_blog-button_delete(href="")
+            section#content-tab3
+                .admin_blog
+                    .admin_blog-create
+                        h3.admin_blog-create_name Страница "Мои работы"
+                        .admin_blog-create_block
+                            h3.admin_blog-block_create Добавить работу
+                            label.admin_blog-block_name
+                                input.admin_blog-block_title(type="text", name="name", placeholder="Название проекта")
+                            label.admin_blog-block_name
+                                input.admin_blog-data_number(type="text", name="techno", placeholder="Технологии")
+                            label.admin_blog-block_name
+                                input.admin_blog-data_number(type="text", name="techno", placeholder="Ссылка")
+                            .admin_works-block_form
+                                label.admin_works-label
+                                    input.admin_works-label_file(type="file")
+                                    span.admin_works-label_text Загрузить картинку                                      
+                            a.admin_blog-text_button(href="") Добавить
+                    .admin_blog-last
+                        h3.admin_blog-last_name Последние работы
+                        table.admin_works-table
+                            tr.admin_blog-caption
+                                th.admin_blog-caption_title-1 Название
+                                th.admin_blog-caption_title-2 Технологии
+                                th.admin_works-caption_title-3 Ссылка
+                                th.admin_works-caption_title-4 Превью
+                                th.admin_blog-caption_title-4 Edit/Delete
+                            tr.admin_blog-items-1
+                                td.admin_blog-item-1 Сайт школы онлайн образования
+                                td.admin_blog-item-2 Html, Css, JavaScript
+                                td.admin_works-item-3 docs.google...
+                                td.admin_works-item-4
+                                    .admin_works-photo_site
+                                td.admin_blog-item
+                                    a.admin_blog-button_edit(href="")
+                                    a.admin_blog-button_delete(href="")
+                            tr.admin_blog-items-2
+                                td.admin_blog-item-1 Сайт школы онлайн образования
+                                td.admin_blog-item-2 Html, Css, JavaScript
+                                td.admin_works-item-3 docs.google...
+                                td.admin_works-item-4
+                                    .admin_works-photo_site
+                                td.admin_blog-item
+                                    a.admin_blog-button_edit(href="")
+                                    a.admin_blog-button_delete(href="")
+                            tr.admin_blog-items-3
+                                td.admin_blog-item-1 Сайт школы онлайн образования
+                                td.admin_blog-item-2 Html, Css, JavaScript
+                                td.admin_works-item-3 docs.google...
+                                td.admin_works-item-4
+                                    .admin_works-photo_site
+                                td.admin_blog-item
+                                    a.admin_blog-button_edit(href="")
+                                    a.admin_blog-button_delete(href="")
+        

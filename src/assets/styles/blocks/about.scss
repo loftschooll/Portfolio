@@ -4,6 +4,24 @@ section.about{
     position: relative;
     background: url("../images/main-works.png") center center no-repeat;
     background-size: cover;
+    @include phones {
+        min-height: 600px;
+    }
+}
+.about_down-scroll_block{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    top: 645px;
+    @include tablets {
+        top: 740px;
+    }
+    @include phones {
+        top: 480px;
+    }
 }
 section.about_title{
     min-height: 1015px;
@@ -14,18 +32,46 @@ section.about_title{
     clip-path: polygon(0 0,0 100%,100% 100%,100% 0,50% 160px);
     margin-top: -160px;
     display: flex;
+    @include laptop {
+        shape-outside: polygon(0 0,0 100%,100% 100%,100% 0,50% 65px);
+        clip-path: polygon(0 0,0 100%,100% 100%,100% 0,50% 65px);
+        margin-top: -65px;
+        flex-direction: column;
+        align-items: center;
+    }
+    @include phones {
+        shape-outside: polygon(0 0,0 100%,100% 100%,100% 0,50% 30px);
+        clip-path: polygon(0 0,0 100%,100% 100%,100% 0,50% 30px);
+        margin-top: -30px;
+    }
 }
 .about_user{
     width: 50%;
     margin-top: 180px;
     display: flex;
     align-items: flex-start;
+    @include desktop {
+        flex-direction: column;
+    }
+    @include laptop {
+        margin-top: 80px;
+        width: 100%;
+    }
+    @include phones {
+        margin-top: 40px;
+    }
 }
 .about_user-title{
     width: 45%;
     display: flex;
     justify-content: center;
     align-items: center;
+    @include desktop {
+        width: 100%;
+    }
+    @include tablets {
+        margin: 30px 0;
+    }
 }
 svg.about_user-icons_item{
     fill: #fff;
@@ -33,32 +79,64 @@ svg.about_user-icons_item{
     transform: rotate(180deg);
     position: absolute;
     z-index: 0;
+    @include phones {
+        height: 160px;
+        width: 180px;
+    }
 }
-h2.works_stars-title{
-    //@include sansuswebissi;
-    font-family: 'Roboto', Helvetica, sans-serif;
+h2.about_user-title{
+    @include Sansus-Webissimo-Regular();
 	font-size: 63px;
     color: #474b57;
     z-index: 1;
+    width: 100%;
 }
 .about_user-block{
     width: 55%;
     height: 100%;
+    @include desktop {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
 }
 .about_user-photo  {
     width: 95%;
     height: 35%;
     background: url("../images/avatar-about.png") right center no-repeat;
     background-size: cover;
+    @include desktop {
+        width: 440px;
+        height: 390px;
+    }
+    @include laptop {
+        width: 75%;
+        height: 554px;
+    }
+    @include phones {
+        width: 100%;
+        height: 320px;
+    }
 }
 .about_user-text{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    @include desktop {
+        width: 440px;
+    }
+    @include laptop {
+        width: 75%;
+    }
+    @include phones {
+        width: 100%;
+        align-items: center;
+    }
 }
 h3.about_user-text_what{
-    //@include sansuswebissi;
-    font-family: 'Roboto', Helvetica, sans-serif;
+    @include Sansus-Webissimo-Regular();
 	font-size: 35px;
     color: #474b57;
     margin: 30px 0;
@@ -80,8 +158,7 @@ h3.about_user-text_what:after{
     width: 95%;
 }
 p.about_user-text_item{
-    //@include Roboto-Regular;
-    font-family: 'Roboto', Helvetica, sans-serif;
+    @include Roboto-Regular();
 	font-size: 16px;
     color: #474b57;
     line-height: 1.7;
@@ -89,6 +166,13 @@ p.about_user-text_item{
 .about_skills{
     width: 50%;
     margin-top: 180px;
+    @include laptop {
+        width: 75%;
+        margin-top: 55px;
+    }
+    @include phones {
+        width: 100%;
+    }
 }
 .about_skills-block_text{
     display: flex;
@@ -96,8 +180,7 @@ p.about_user-text_item{
     width: 100%;
 }
 h3.about_skills-text{
-    //@include SansusWebissi;
-    font-family: 'Roboto', Helvetica, sans-serif;
+    @include Sansus-Webissimo-Regular();
 	font-size: 35px;
     color: #474b57;
     display: flex;
@@ -108,6 +191,9 @@ h3.about_skills-text{
     width: 50%;
     text-align: center;
     line-height: 1.2;
+    @include phones {
+        width: 70%;
+    }
 }
 h3.about_skills-text:after{
     content: "";
@@ -117,18 +203,33 @@ h3.about_skills-text:after{
     margin-top: 30px;
 }
 p.about_skills-text_title{
-    font-family: 'Roboto-Regular', Helvetica, sans-serif;
+    @include Roboto-Regular();
 	font-size: 16px;
     color: #474b57;
     margin: 30px 0 30px 40px;
+    @include laptop {
+        margin: 30px 0;
+    }
+    @include phones {
+        margin: 30px 10px;
+    }
 }
 ul.about_skills-main{
-    padding: 0 0 0 40px;
     margin: 30px 0;
     list-style-type: none;
+    padding: 0;
+}
+li.about_skills-main_item{
+    padding-left: 40px;
+    @include laptop {
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 h3.about_skills-main_name{
-    font-family: 'Roboto-Medium', Helvetica, sans-serif;
+    @include Roboto-Medium();
 	font-size: 28px;
     color: #474b57;
     margin: 20px 0;
@@ -137,18 +238,30 @@ h3.about_skills-main_name{
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    @include tablets {
+        width: 100%;
+        justify-content: center;
+    }
+    @include phones {
+        flex-wrap: wrap;
+    }
 }
 .about_skills-block_circle{
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 120px;
+    height: 120px;
+    margin-right: 4%;
+    @include tablets {
+        margin: 0 2%;
+    }
 }
 svg.about_skills-percentage{
     display: inline-block;
     width: 120px;
     height: 120px;
-    margin-right: 40px;
     transform: rotate(-90deg);
 }
 circle.circle{
@@ -176,12 +289,11 @@ circle.circle_above[style="animation-delay: -100s"] {
     }
 }
 h4.about_skills-circle_name{
-    font-family: 'Roboto-Medium', Helvetica, sans-serif;
+    @include Roboto-Medium();
 	font-size: 14px;
     color: #243994;
     margin: 0;
     position: absolute;
-    margin-left: -40px;
     width: 48%;
     text-align: center;
 }
@@ -191,18 +303,32 @@ section.about_map{
     background: url("../images/Map.png") right center no-repeat;
     background-size: cover;
     position: relative;
+    @include phones {
+        min-height: 950px;
+    }
+}
+.about_contact-map_block{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .about_contact{
     width: 580px;
     height: 285px;
-    margin: 0;
+    margin: 100px auto;
     background: rgba(251, 251, 251, 0.7);
-    position: absolute;
-    left: 30%;
-    top: 15%;
+    @include tablets {
+        width: 350px;
+        height: 370px;
+        margin: 50px auto;
+    }
+    @include phones {
+        width: 100%;
+    }
 }
 h3.about_contact-text{
-    font-family: 'Roboto-Medium', Helvetica, sans-serif;
+    @include Roboto-Medium();
 	font-size: 35px;
     color: #474b57;
     margin: 0;
@@ -226,6 +352,9 @@ ul.about_contact-items{
     justify-content: center;
     min-height: 200px;
     align-items: center;
+    @include tablets {
+        margin: 15px 0;
+    }
 }
 li.about_contact-item{
     width: 260px;
@@ -233,33 +362,16 @@ li.about_contact-item{
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    @include tablets {
+        width: 100%;
+        margin-left: 15px;
+    }
 }
 .about_contact-icon_skype{
-    width: 45px;
-    height: 45px;
-    background: url("../images/icons/skype_n.svg") right center no-repeat;
-    background-size: cover;
-}
-.about_contact-icon_phone{
-    width: 45px;
-    height: 45px;
-    background: url("../images/icons/phone_n.svg") right center no-repeat;
-    background-size: cover;
-}
-.about_contact-icon_mail{
-    width: 45px;
-    height: 45px;
-    background: url("../images/icons/envelope_n.svg") right center no-repeat;
-    background-size: cover;
-}
-.about_contact-icon_map{
-    width: 49px;
-    height: 45px;
-    background: url("../images/icons/map_n.svg") right center no-repeat;
-    background-size: cover;
+    fill: #1056d1;
 }
 p.about_contact-item_skype{
-    font-family: 'Roboto-Medium', Helvetica, sans-serif;
+    @include Roboto-Medium();
 	font-size: 16px;
     color: #474b57;
     margin-left: 10px;

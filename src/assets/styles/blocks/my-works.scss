@@ -56,9 +56,19 @@ svg.works_user-icons_item{
     fill: #fff;
     opacity: 0.1;
     position: absolute;
+    width: 470px;
+    height: 270px;
+    @include phones {
+        width: 280px;
+        height: 260px;
+    }
 }
 .works_user-stars_avatar{
     z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 a.works_down-scroll{
     display: flex;
@@ -66,6 +76,9 @@ a.works_down-scroll{
     align-items: center;
     position: relative;
     top: 130px;
+    @include tablets {
+        top: 220px;
+    }
 }
 svg.works_down-icons_item{
     fill: #fff;
@@ -74,8 +87,6 @@ svg.works_down-icons_item{
     width: 100%;
     height: 340px;
     background: rgba(49,52,64,.7);
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     justify-content: center;
     align-items: flex-end;
@@ -84,18 +95,45 @@ svg.works_down-icons_item{
     shape-outside: polygon(0 0,50% 40%,100% 0,100% 100%,0 100%);
     shape-margin: 100px;
     clip-path: polygon(0 0,50% 40%,100% 0,100% 100%,0 100%);
+    @include tablets {
+        height: 200px;
+        shape-outside: polygon(0 0,50% 65px,100% 0,100% 100%,0 100%);
+        shape-margin: 100px;
+        clip-path: polygon(0 0,50% 65px,100% 0,100% 100%,0 100%);
+    }
+    @include phones {
+        height: 124px;
+        shape-outside: polygon(0 0,50% 30px,100% 0,100% 100%,0 100%);
+        shape-margin: 100px;
+        clip-path: polygon(0 0,50% 30px,100% 0,100% 100%,0 100%);
+    }
 }
 svg.works_stars-icons_item{
     fill: #fff;
     opacity: 0.3;
     transform: rotate(180deg);
     position: absolute;
+    width: 230px;
+    height: 200px;
+    @include tablets {
+        height: 120px;
+        width: 200px;
+    }
+    @include phones {
+        height: 100px;
+        width: 120px;
+    }
 }
 h2.works_stars-title{
-    //@include sansuswebissi;
-    font-family: 'Roboto', Helvetica, sans-serif;
+    @include Sansus-Webissimo-Regular();
 	font-size: 63px;
     color: #fff;
+    @include tablets {
+        margin: 30px 0;
+    }
+    @include phones {
+        margin: 7px 0;
+    }
 }
 section.works_block{
     position: relative;
@@ -111,10 +149,12 @@ section.works_block{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    @include tablets {
+        display: none;
+    }
 }
 h3.works_block-text{
-    //@include sansuswebissi;
-    font-family: 'Roboto', Helvetica, sans-serif;
+    @include Sansus-Webissimo-Regular();
 	font-size: 35px;
     color: #474b57;
     text-transform: uppercase;
@@ -124,6 +164,10 @@ h3.works_block-text{
     flex-direction: column;
     margin: 30px 0;
     text-align: center;
+    width: 75%;
+    @include phones {
+        width: 90%;
+    }
 }
 h3.works_block-text:after{
     content: "";
@@ -131,10 +175,12 @@ h3.works_block-text:after{
     height: 3px;
     background: #9c9d9f;
     margin-top: 30px;
+    @include tablets {
+        margin-top: 15px;
+    }
 }
 h4.works_block-text_name{
-    //@include Roboto-medium;
-    font-family: 'Roboto', Helvetica, sans-serif;
+    @include Roboto-Medium();
 	font-size: 16px;
     color: #083c96;
     text-transform: uppercase;
@@ -149,6 +195,9 @@ a.works_block-text_button{
     align-items: center;
     text-decoration: none;
     margin: 55px 0;
+    @include tablets {
+        margin: 30px 0 50px 0;
+    }
 }
 .works_block-button_icon{
     display: flex;
@@ -160,8 +209,7 @@ svg.works_block-button_link{
     fill: #fff;
 }
 p.works_block-button_text{
-    //@include Roboto-medium;
-    font-family: 'Roboto', Helvetica, sans-serif;
+    @include Roboto-Medium();
 	font-size: 16px;
     color: #fff;
 }
@@ -169,6 +217,9 @@ p.works_block-button_text{
     background: #f2f0e8;
     width: 50%;
     min-height: 100%;
+    @include tablets {
+        width: 100%;
+    }
 }
 .works_block-photo{
     height: 525px;
@@ -176,27 +227,70 @@ p.works_block-button_text{
     display: flex;
     justify-content: center;
     align-items: center;
+    @include phones {
+        height: 370px;
+    }
+}
+.works_block-title_double {
+    display: none;
+    @include tablets {
+        display: flex;
+        flex-direction: column;
+        height: 270px;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
 }
 .works_block-photo_title{
     height: 416px;
     width: 643px;
     background: url("../images/my-works.png") center center no-repeat;
     background-size: cover;
+    @include desktop {
+        height: 376px;
+        width: 575px;
+    }
+    @include laptop {
+        height: 300px;
+        width: 450px;
+    }
+    @include tablets {
+        height: 400px;
+        width: 600px;
+    }
+    @include phones {
+        height: 250px;
+        width: 380px;
+    }
 }
 .works_block-slide{
     height: 225px;
     width: 100%;
     display: flex;
+    @include phones {
+        height: 120px;
+    }
 }
 .works_block-slide_left{
     position: relative;
     width: 50%;
+    @include tablets {
+        display: flex;
+        align-items: center;
+    }    
 }
 .works_block-photo_left{
     height: 100%;
     width: 100%;
     background: url("../images/left-works.png") center center no-repeat;
     background-size: cover;
+    @include desktop {
+        height: 94%;
+    }
+    @include laptop {
+        height: 85%;
+    }
 }
 .works_block-icon_left, .works_block-icon_right{
     position: absolute;
@@ -223,19 +317,32 @@ svg.works_block-icon_up{
 .works_block-slide_right{
     width: 50%;
     position: relative;
+    @include tablets {
+        display: flex;
+        align-items: center;
+    }
 }
 .works_block-photo_right{
     height: 100%;
     width: 100%;
     background: url("../images/right-works.png") center center no-repeat;
     background-size: cover;
+    @include desktop {
+        height: 94%;
+    }
+    @include laptop {
+        height: 85%;
+    }
 }
 section.works_speak{
     position: relative;
-    min-height: 1360px;
+    min-height: 1400px;
     width: 100%;
     background: url("../images/what-works.png") center center no-repeat;
     background-size: cover;
+    @include phones {
+        min-height: 1800px;
+    }
 }
 .works_speak-block{
     position: relative;
@@ -259,22 +366,33 @@ svg.works_speak-icons_item{
     fill: #fff;
     opacity: 0.3;
     position: absolute;
+    width: 260px;
+    height: 220px;
+    @include phones {
+        height: 170px;
+        margin-top: 10px;
+    }
 }
 h2.works_speak-title_text{
-    //@include SansusWebissi;
-    font-family: 'Roboto', Helvetica, sans-serif;
+    @include Sansus-Webissimo-Regular();
 	font-size: 63px;
     color: #fff;
     width: 45%;
     text-align: center;
     margin: 40px 0;
     line-height: 0.9;
+    @include phones {
+        width: 90%;
+    }
 }
 .works_speak-slider{
     width: 820px;
     display: flex;
-    height: 300px;
+    min-height: 300px;
     align-items: center;
+    @include phones {
+        flex-direction: column;
+    }
 }
 .works_speak-slider_title{
     width: 380px;
@@ -284,6 +402,9 @@ h2.works_speak-title_text{
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    @include phones {
+        margin: 0 15px;
+    }
 }
 .works_speak-block_photo{
     width: 90px;
@@ -292,14 +413,14 @@ h2.works_speak-title_text{
     align-items: center;
     justify-content: center;
 }
-img.works_speak-slider_photo{
+.works_speak-slider_photo{
     background: url("../images/DK.png") center center no-repeat;
     background-size: cover;
     width: 80px;
     height: 80px;
     border-radius: 50%;
 }
-img.works_speak-slider_photo-1{
+.works_speak-slider_photo-1{
     background: url("../images/VS.png") center center no-repeat;
     background-size: cover;
     width: 80px;
@@ -307,24 +428,21 @@ img.works_speak-slider_photo-1{
     border-radius: 50%;
 }
 p.works_speak_slider_text{
-    //@include Roboto-Italic;
-    font-family: 'Roboto', Helvetica, sans-serif;
+    @include Roboto-Italic();
 	font-size: 16px;
     color: #fff;
     margin: 10px 0;
     line-height: 1.7;
 }
 p.works_speak_slider_name{
-    //@include Roboto-Bold Italic;
-    font-family: 'Roboto', Helvetica, sans-serif;
+    @include Roboto-Italic();
 	font-size: 16px;
     color: #fff;
     margin: 15px 0 0 0;
     font-weight: bold;
 }
 p.works_speak-bonus{
-    //@include Roboto-Italic;
-    font-family: 'Roboto', Helvetica, sans-serif;
+    @include Roboto-Italic();
 	font-size: 16px;
     color: #fff;
     margin: 0;
@@ -341,8 +459,7 @@ p.works_speak-bonus{
     margin: 0 auto;
 }
 h3.works_speak-link_text{
-    //@include SansusWebissi;
-    font-family: 'Roboto', Helvetica, sans-serif;
+    @include Sansus-Webissimo-Regular();
 	font-size: 28px;
     color: #fff;
     display: flex;
@@ -380,8 +497,7 @@ input.works_speak-data_name{
     justify-content: center;
     align-items: center;
     padding-left: 15px;
-    //@include Roboto-Regular
-    font-family: Roboto-Regular,Helvetia,sans-serif;
+    @include Roboto-Regular();
     font-size: 16px;
     color: #fff;
 }
@@ -390,7 +506,7 @@ input.works_speak-data_name{
     height: 100px;
     border: none;
     background: rgba(28,22,26,.6);
-    font-family: Roboto-Regular,Helvetia,sans-serif;
+    @include Roboto-Regular();
     font-size: 16px;
     color: #fff;
     padding: 15px;
@@ -412,7 +528,7 @@ a.works_speak-link_send{
     height: 100%;
     text-decoration: none;
     background: #004cd1;
-    font-family: Roboto-Regular,Helvetia,sans-serif;
+    @include Roboto-Regular();
     font-size: 16px;
     color: #fff;
 }
@@ -424,7 +540,7 @@ a.works_speak-link_clean{
     height: 100%;
     text-decoration: none;
     background: rgba(28,22,26,.6);
-    font-family: Roboto-Regular,Helvetia,sans-serif;
+    @include Roboto-Regular();
     font-size: 16px;
     color: #fff;
 }

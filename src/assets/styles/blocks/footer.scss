@@ -1,28 +1,73 @@
 footer.footer{
-    height: 185px;
+    min-height: 185px;
+    max-height: 400px;
+    height: auto;
     width: 100%;
     position: absolute;
+    bottom: 0;
+}
+footer.footer_blog {
+    min-height: 185px;
+    max-height: 400px;
+    height: auto;
+    width: 100%;
+    position: relative;
     bottom: 0;
 }
 .footer_title{
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-    height: 145px;
+    min-height: 145px;
     width: 100%;
-    background: rgba(61, 63, 71, 0.7)
+    background: rgba(61, 63, 71, 0.7);
+    @include tablets {
+        flex-wrap: wrap;
+        height: 190px;
+        justify-content: space-around;
+    }
+    @include phones {
+        height: 100%;
+        flex-direction: column;
+    }
 }
 .footer_title-text{
     width: 33.3%;
     padding: 30px;
     height: 60%;
+    @include laptop {
+        padding: 30px 10px 0 30px;
+    }
+    @include tablets {
+        width: 95%;
+        height: 60px;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 1px solid #494a52;
+        margin: 0 auto;
+    }
+    @include phones {
+        height: 75px;
+        width: 95%;
+    }
 }
 p.footer_title-text_loft{
-    font-family: Roboto-Light,Helvetia,sans-serif;
+    @include Roboto-Light();
     font-size: 16px;
     color: #fff;
     margin: 0;
     width: 95%;
+    @include tablets {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    @include phones {
+        text-align: center;
+    }
 }
 .footer_link{
     display: flex;
@@ -32,6 +77,27 @@ p.footer_title-text_loft{
     border-left: 2px solid #57595f;
     margin: 30px 0;
     border-right: 2px solid #57595f;
+    @include desktop {
+        width: 38%;
+    }
+    @include laptop {
+        width: 40%;
+    }
+    @include tablets {
+        width: 50%;
+        border: none;
+        height: 55%;
+        margin: 20px 0 0 0;
+    }
+    @include phones {
+        width: 95%;
+        height: 90px;
+        border-bottom: 1px solid #494a52;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px auto;
+    }
 }
 ul.footer_link-menu{
     display: flex;
@@ -40,13 +106,20 @@ ul.footer_link-menu{
     padding: 0;
     margin: 0 0 0 30px;
     list-style-type: none;
+    @include tablets {
+        margin: 0 0 0 20px;
+    }
+    @include phones {
+        justify-content: center;
+        margin: 0;
+    }
 }
 li.footer_link-menu_item{
     margin-right: 17px;
 }
 li.footer_link-menu_item a{
     text-decoration: none;
-    font-family: Roboto-Bold,Helvetia,sans-serif;
+    @include Roboto-Bold();
     font-size: 16px;
     color: #fff;
     font-weight: bold;
@@ -56,34 +129,73 @@ li.footer_link-menu_item a{
     align-items: center;
     justify-content: flex-start;
     margin: 20px 0 20px 30px;
+    @include tablets {
+        margin: 20px 0 20px 20px;
+    }
+    @include phones {
+        justify-content: center;
+        margin: 20px 0;
+    }
 }
 .footer_link-icon a{
     display: flex;
     justify-content: center;
     align-items: center;
     margin-right: 25px;
+    @include phones {
+        margin: 0 10px;
+    }
 }
 .footer_link-icon_item{
     fill: #8e8f93;
 }
 .footer_link-icon_item:hover{
     fill: #004bd1;
+    @include phones {
+        fill: #fff;
+    }
 }
 .footer_adress{
     width: 33.3%;
     height: 60%;
     padding: 30px;
+    @include desktop {
+        width: 30%;
+    }
+    @include laptop {
+        width: 23%;
+        padding: 30px 10px 0 30px;
+    }
+    @include tablets {
+        width: 44%;
+        padding: 0;
+        margin: 20px;
+        height: 43%;
+    }
+    @include phones {
+        width: 100%;
+        height: 120px;
+        margin: 10px 0;
+    }
 }
 ul.footer_adress-items{
     margin: 0;
     padding: 0;
     list-style-type: none;
+    @include tablets {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    @include phones {
+        align-items: center;
+    }
 }
 li.footer_adress-item{
     height: 25px;
 }
 li.footer_adress-item p{
-    font-family: Roboto-Light,Helvetia,sans-serif;
+    @include Roboto-Light();
     font-size: 16px;
     color: #fff;
     margin: 0;
@@ -95,10 +207,31 @@ li.footer_adress-item p{
     display: flex;
     align-items: center;
     justify-content: center;
+    @include phones {
+        height: 60px;
+        flex-wrap: wrap;
+    }
 }
 p.footer_text-down_copyright{
-    font-family: Roboto-Light,Helvetia,sans-serif;
+    @include Roboto-Light();
     font-size: 16px;
     color: #fff;
     margin: 0;
+    padding: 0 5px;
+    @include phones {
+        text-align: center;
+    }
+}
+p.footer_text-down_copyright-1{
+    @include Roboto-Light();
+    font-size: 16px;
+    color: #fff;
+    margin: 0;
+    padding: 0 5px;
+    border-left: 1px solid #fff;
+    border-right: 1px solid #fff;
+    @include phones {
+        text-align: center;
+        border-left: none;
+    }
 }

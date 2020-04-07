@@ -6,8 +6,7 @@ section.blog{
     background-size: cover;
 }
 .user__name-blog{
-    //@include sansuswebissi;
-    font-family: 'Roboto', Helvetica, sans-serif;
+    @include Sansus-Webissimo-Regular();
 	font-size: 63px;
     color: #fff;
     margin: 0;
@@ -21,6 +20,21 @@ section.blog_main{
     clip-path: polygon(0 0,0 100%,100% 100%,100% 0,50% 150px);
     margin-top: -150px;
     display: flex;
+    @include desktop {
+        shape-outside: polygon(0 0,0 100%,100% 100%,100% 0,50% 100px);
+        clip-path: polygon(0 0,0 100%,100% 100%,100% 0,50% 100px);
+        margin-top: -100px;
+    }
+    @include tablets {
+        shape-outside: polygon(0 0,0 100%,100% 100%,100% 0,50% 65px);
+        clip-path: polygon(0 0,0 100%,100% 100%,100% 0,50% 65px);
+        margin-top: -65px;
+    }
+    @include phones {
+        shape-outside: polygon(0 0,0 100%,100% 100%,100% 0,50% 30px);
+        clip-path: polygon(0 0,0 100%,100% 100%,100% 0,50% 30px);
+        margin-top: -30px;
+    }
 }
 .blog_main-title{
     width: 25%;
@@ -29,6 +43,10 @@ section.blog_main{
     display: flex;
     justify-content: center;
     align-items: flex-start;
+    @include tablets {
+        margin-top: 130px;
+        display: none;
+    }
 }
 ul.blog_main-title_items{
     position: sticky;
@@ -55,25 +73,38 @@ li.active{
 }
 a.blog_main-title_link{
     text-decoration: none;
-    //@include sansuswebissi;
-    font-family: 'Roboto', Helvetica, sans-serif;
+    @include Roboto-Regular();
 	font-size: 16px;
     color: #455a64;
     margin: 0;
 }
 a.active{
     color: #083c96;
-    font-weight: bold;
+    @include Roboto-Bold();
+    font-size: 16px;
 }
 .blog_main-text{
     width: 75%;
     height: 100%;
     margin-top: 220px;
+    @include tablets {
+        margin-top: 130px;
+        width: 100%;
+    }
+    @include phones {
+        margin-top: 70px;
+    }
 }
 ul.blog_main-text_items{
     list-style-type: none;
     padding: 0;
     margin: 0 100px;
+    @include tablets {
+        margin: 0 25px;
+    }
+    @include phones {
+        margin: 0 10px;
+    }
 }
 li.blog_main-text_item{
     display: flex;
@@ -86,22 +117,19 @@ li.blog_main-text_item:last-child{
     border: none;
 }
 h3.blog_main-text_name{
-    //@include sansuswebissi;
-    font-family: 'Roboto', Helvetica, sans-serif;
+    @include Sansus-Webissimo-Regular();
 	font-size: 35px;
     color: #474b57;
     margin: 0;
 }
 p.blog_main-text_date{
-    //@include sansuswebissi;
-    font-family: 'Roboto-Regular', Helvetica, sans-serif;
+    @include Roboto-Regular();
 	font-size: 16px;
     color: #083c96;
     margin: 20px 0;
 }
 p.blog_main-text_write{
-    //@include sansuswebissi;
-    font-family: 'Roboto-Regular', Helvetica, sans-serif;
+    @include Roboto-Regular();
 	font-size: 16px;
     color: #455a64;
     margin: 0 0 20px 0;

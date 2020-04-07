@@ -1,0 +1,78 @@
+@font-face {
+	font-family: 'Roboto-Medium';
+	font-display: swap;
+    src: url('../fonts/Roboto-Medium.woff') format('woff'), url('../fonts/Roboto-Medium.ttf')
+     format('ttf'), url('../fonts/Roboto-Medium.otf') format('otf');
+	font-weight: bold;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Roboto-Light';
+	font-display: swap;
+    src: url('../fonts/Roboto-Light.woff') format('woff'), url('../fonts/Roboto-Light.ttf')
+     format('ttf'), url('../fonts/Roboto-Light.otf') format('otf');
+	font-weight: bold;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Roboto-Regular';
+	font-display: swap;
+    src: url('../fonts/Roboto-Regular.woff') format('woff'), url('../fonts/Roboto-Regular.ttf')
+     format('ttf'), url('../fonts/Roboto-Regular.otf') format('otf');
+	font-weight: bold;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Roboto-Bold';
+	font-display: swap;
+    src: url('../fonts/Roboto-Bold.woff') format('woff'), url('../fonts/Roboto-Bold.ttf')
+     format('ttf'), url('../fonts/Roboto-Bold.otf') format('otf');
+	font-weight: bold;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Roboto-Italic';
+	font-display: swap;
+    src: url('../fonts/Roboto-Italic.woff') format('woff'), url('../fonts/Roboto-Italic.ttf')
+     format('ttf'), url('../fonts/Roboto-Italic.otf') format('otf');
+	font-weight: bold;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Roboto-BoldItalic';
+	font-display: swap;
+    src: url('../fonts/Roboto-BoldItalic.woff') format('woff'), url('../fonts/Roboto-BoldItalic.ttf')
+     format('ttf'), url('../fonts/Roboto-BoldItalic.otf') format('otf');
+	font-weight: bold;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Sansus-Webissimo-Regular';
+	font-display: swap;
+    src: url('../fonts/Sansus-Webissimo-Regular.woff') format('woff'), url('../fonts/Sansus-Webissimo-Regular.ttf')
+     format('ttf'), url('../fonts/Sansus-Webissimo-Regular.otf') format('otf');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@mixin Roboto-Medium() {
+	font-family: 'Roboto-Medium', Helvetia, sans-serif;
+}
+@mixin Roboto-Light() {
+	font-family: 'Roboto-Light', Helvetia, sans-serif;
+}
+@mixin Roboto-Regular() {
+	font-family: 'Roboto-Regular', Helvetia, sans-serif;
+}
+@mixin Roboto-Bold() {
+	font-family: 'Roboto-Bold', Helvetia, sans-serif;
+}
+@mixin Roboto-Italic() {
+	font-family: 'Roboto-Italic', Helvetia, sans-serif;
+}
+@mixin Roboto-BoldItalic() {
+	font-family: 'Roboto-BoldItalic', Helvetia, sans-serif;
+}
+@mixin Sansus-Webissimo-Regular() {
+	font-family: 'Sansus-Webissimo-Regular', Helvetia, sans-serif;
+}

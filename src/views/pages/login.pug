@@ -1,0 +1,40 @@
+extends ../auth.layout.pug
+
+block content
+    .auth__block
+        .auth__block-content
+            h2.auth__login Авторизуйтесь
+            form.auth_login-block
+                .auth_login-block_name
+                    label
+                        input.auth_login-data_name(type="text" name="name" placeholder="Логин" required)
+                        span.auth_login-icon_block
+                            .auth_login-icon_photo
+                                svg.auth_login-icons
+                                    use(xlink:href='assets/images/sprate.svg#login')
+                .auth_login-block_name
+                    label
+                        input.auth_login-data_password(type="text" name="password" placeholder="Пароль" required)
+                        span.auth_login-icon_block
+                            .auth_login-icon_photo
+                                svg.auth_login-icons
+                                    use(xlink:href='assets/images/sprate.svg#key')
+            .auth_login-check
+                input(type="checkbox", name="check", value="chekc" checked="")
+                label.login_check-men Я человек
+            .auth_login-robot
+                p.auth_login-robot_text Вы точно не робот?
+                .auth_check-login_block
+                    label.login_check-yes_image
+                        input(type="radio", name="check" checked="")
+                        .login_check-yes
+                        p.login_check-yes_text Да
+                    label.login_check-yes_image
+                        input(type="radio", name="check")
+                        .login_check-yes
+                        p.login_check-yes_text Не уверен
+            .auth_login-buttons
+                a(href="index.html").auth_login-buttons_main На главную
+                a(href="").auth_login-buttons_enter Войти
+        .auth__footer
+            p.auth__footer-text © Владимир Астахов | создано с любовью в LoftSchool | 2016

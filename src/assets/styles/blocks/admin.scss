@@ -1,0 +1,496 @@
+.admin {
+    min-height: 100%;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.admin__blocks {
+    min-height: 600px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+.admin_title {
+    width: 100%;
+    height: 80px;
+    background: #0548be;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    @include phones {
+        justify-content: center;
+        flex-direction: column-reverse;
+    }
+}
+h3.admin_title-text{
+    @include Roboto-Medium();
+    font-size: 28px;
+    color: #fff;
+    width: 50%;
+    margin-left: 30px;
+    @include phones {
+        width: 100%;
+        margin: 0;
+        text-align: center;
+    }
+}
+a.admin_tilte-link {
+    @include Roboto-Medium();
+    font-size: 16px;
+    color: #fff;
+    width: 50%;
+    text-align: right;
+    margin-right: 30px;
+    @include phones {
+        width: 100%;
+        margin: 0;
+        text-align: center;
+    }
+}
+.admin_tabs{
+    width: 100%;
+    min-height: 700px;
+    background: rgba(222, 225, 232, 0.8);
+}
+.admin_tabs-input {
+    display: none;
+    position: absolute;
+}
+.admin_tabs-label {
+    display: inline-block;
+    width: 100px;
+    height: 20px;
+    background: #f0efe9;
+    padding: 20px 40px;
+    text-align: center;
+    font-weight: 600;
+    @include Roboto-Medium();
+    font-size: 16px;
+    color: #455a64;
+    border-right: 2px solid #fff;
+    margin: 0 -2px 0;
+    @include phones {
+        width: 100%;
+        text-align: center;
+        padding: 20px 0;
+        border-bottom: 1px solid white;
+        border-right: none;
+    }
+}
+.admin_tabs > .admin_tabs-input:checked + .admin_tabs-label {
+    color: #0548be;
+    @include Roboto-Medium();
+    font-size: 16px;
+    background: #fff;
+}
+.admin_tabs > section {
+    display: none;
+}
+#tab1:checked ~ #content-tab1, #tab2:checked ~ #content-tab2, #tab3:checked ~ #content-tab3 {
+    display: block;
+}
+h3.admin_about{
+    @include Roboto-Medium();
+    font-size: 21px;
+    color: #455a64;
+    margin: 0;
+    padding: 50px 0 0 30px;
+}
+.admin_about-title_block{
+    display: flex;
+    flex-wrap: wrap;
+}
+.admin_about-block{
+    width: 360px;
+    height: 235px;
+    margin: 30px 30px 5px 30px;
+}
+h4.admin_about-block-title{
+    @include Roboto-Medium();
+    font-size: 16px;
+    color: #455a64;
+    margin: 0;
+}
+ul.admin_about-items{
+    margin: 20px;
+    padding: 0;
+    list-style-type: none;
+}
+li.admin_about-item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 5px 0;
+}
+h4.admin_about-item_name {
+    @include Roboto-Regular();
+    font-size: 16px;
+    color: #455a64;
+    width: 100px;
+    margin: 8px 0;
+}
+input.admin_about-item_number {
+    height: 32px;
+    width: 46px;
+    border-radius: 4px;
+    border: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+p.admin_about-item_text{
+    width: 30px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+.admin_about-item_edit{
+    background: url("../images/edit.png") center center no-repeat;
+    background-size: cover;
+    width: 17px;
+    height: 17px;
+    margin: 0 10px;
+}
+.admin_about-item_clean{
+    background: url("../images/cancel.png") center center no-repeat;
+    background-size: cover;
+    width: 15px;
+    height: 15px;
+}
+.admin_about-create{
+    display: flex;
+}
+input.admin_about-create_input{
+    width: 170px;
+    height: 45px;
+    border: none;
+    border-radius: 4px;
+    padding: 0 0 0 20px;
+    margin: 0 10px 0 20px;
+    @include Roboto-Regular();
+    font-size: 16px;
+    color: #373e42;
+    @include phones {
+        margin: 0 10px 0 0;
+    }
+}
+a.admin_about-create_button{
+    width: 115px;
+    height: 45px;
+    @include Roboto-Regular();
+    font-size: 16px;
+    color: #fff;
+    background: #0548be;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    text-decoration: none;
+}
+.admin_blog{
+    min-height: 600px;
+    max-height: 1200px;
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+.admin_blog-create{
+    width: 550px;
+}
+.admin_blog-create_block{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 30px;
+}
+h3.admin_blog-create_name{
+    @include Roboto-Medium();
+    font-size: 21px;
+    color: #455a64;
+    margin: 0;
+    padding: 50px 0 40px 30px;
+}
+h3.admin_blog-block_create{
+    @include Roboto-Medium();
+    font-size: 16px;
+    color: #455a64;
+    margin: 0 0 10px 0;
+}
+label.admin_blog-block_name{
+    margin: 10px 0;
+}
+input.admin_blog-block_title{
+    width: 300px;
+    height: 45px;
+    @include Roboto-Regular();
+    font-size: 16px;
+    color: #373e42;
+    margin: 0;
+    padding: 0 0 0 20px;
+    border: none;
+    border-radius: 5px;
+}
+input.admin_blog-data_number{
+    width: 300px;
+    height: 45px;
+    @include Roboto-Regular();
+    font-size: 16px;
+    color: #373e42;
+    margin: 0;
+    padding: 0 0 0 20px;
+    border: none;
+    border-radius: 5px;
+}
+textarea.admin_blog-text{
+    width: 500px;
+    height: 180px;
+    border: none;
+    padding: 0;
+    margin: 15px 0 25px 0;
+    resize: none;
+    @include phones {
+        width: 340px;
+    }
+}
+a.admin_blog-text_button{
+    width: 115px;
+    height: 45px;
+    @include Roboto-Medium();
+    font-size: 16px;
+    color: #fff;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #0548be;
+    border-radius: 4px;
+    text-decoration: none;
+}
+.admin_blog-last{
+    width: 600px;
+    padding-left: 30px;
+    margin-bottom: 20px;
+}
+h3.admin_blog-last_name{
+    @include Roboto-Medium();
+    font-size: 16px;
+    color: #455a64;
+    margin: 50px 0 15px 0;
+}
+table.admin_blog-table{
+    width: 560px;
+    height: 450px;
+    background: #fff;
+    border-radius: 10px;
+    border-collapse: collapse;
+    position: relative;
+}
+tr.admin_blog-caption{
+    width: 100%;
+    height: 55px;
+    border-bottom: 1px solid #0548be;
+    background: #fff;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 10px 10px 0 0;
+}
+table.admin_blog-table tr:nth-child(2n){
+    background: #f9f9f9;
+}
+th.admin_blog-caption_title-1{
+    @include Roboto-Medium();
+    font-size: 14px;
+    color: #455a64;
+    margin: 0;
+    width: 140px;
+    text-align: left;
+    padding-left: 25px;
+    border-radius: 10px 0 0 0;
+}
+th.admin_blog-caption_title-2{
+    @include Roboto-Medium();
+    font-size: 14px;
+    color: #455a64;
+    margin: 0;
+    width: 95px;
+    text-align: left;
+}
+th.admin_blog-caption_title-3{
+    @include Roboto-Medium();
+    font-size: 14px;
+    color: #455a64;
+    margin: 0;
+    width: 190px;
+    text-align: left;
+}
+th.admin_blog-caption_title-4{
+    @include Roboto-Medium();
+    font-size: 14px;
+    color: #455a64;
+    margin: 0;
+    width: 60px;
+    text-align: left;
+    border-radius: 0 10px 0 0;
+}
+tr.admin_blog-items-1{
+    height: 95px;
+    width: 100%;
+    position: absolute;
+    top: 56px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+tr.admin_blog-items-2{
+    height: 95px;
+    width: 100%;
+    position: absolute;
+    top: 151px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+tr.admin_blog-items-3{
+    height: 95px;
+    width: 100%;
+    position: absolute;
+    top: 246px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+td.admin_blog-item-1{
+    @include Roboto-Regular();
+    font-size: 14px;
+    color: #455a64;
+    margin: 0;
+    padding-left: 25px;
+    width: 140px;
+}
+td.admin_blog-item-2{
+    @include Roboto-Regular();
+    font-size: 14px;
+    color: #455a64;
+    margin: 0;
+    width: 95px;
+}
+td.admin_blog-item-3{
+    @include Roboto-Regular();
+    font-size: 14px;
+    color: #455a64;
+    margin: 0;
+    width: 190px;
+}
+td.admin_blog-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 65px;
+    height: 100%;
+}
+a.admin_blog-button_edit{
+    background: url("../images/edit.png") center center no-repeat;
+    background-size: cover;
+    width: 17px;
+    height: 17px;
+    margin-bottom: 13px;
+}
+a.admin_blog-button_delete{
+    background: url("../images/cancel.png") center center no-repeat;
+    background-size: cover;
+    width: 15px;
+    height: 15px;
+}
+table.admin_works-table{
+    width: 625px;
+    height: 450px;
+    background: #fff;
+    border-radius: 10px;
+    border-collapse: collapse;
+    position: relative;
+}
+table.admin_works-table tr:nth-child(2n){
+    background: #f9f9f9;
+}
+th.admin_works-caption_title-3{
+    @include Roboto-Medium();
+    font-size: 14px;
+    color: #455a64;
+    margin: 0;
+    width: 110px;
+    text-align: left;
+}
+td.admin_works-item-3{
+    @include Roboto-Regular();
+    font-size: 14px;
+    color: #455a64;
+    margin: 0;
+    width: 110px;
+}
+th.admin_works-caption_title-4{
+    @include Roboto-Medium();
+    font-size: 14px;
+    color: #455a64;
+    margin: 0;
+    width: 150px;
+    text-align: left;
+}
+td.admin_works-item-4{
+    width: 150px;
+}
+.admin_works-photo_site{
+    background: url("../images/admin-photo.png") center center no-repeat;
+    background-size: cover;
+    width: 84px;
+    height: 55px;
+}
+.admin_works-block_form{
+    margin: 30px 0;
+    box-sizing: border-box;
+    position: relative;
+}
+.admin_works-block_form label.admin_works-label > input[type="file"] {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip:rect(0,0,0,0);
+    border: 0;
+}
+.admin_works-block_form label.admin_works-label{
+    position: relative;
+    padding: 1em;
+    display: flex;
+    justify-content: center;
+    width: 250px;
+    align-items: center;
+    height: 50px;
+    cursor: pointer;
+}
+.admin_works-block_form label.admin_works-label:before{
+    content: "";
+    background: url("../images/links.png") center center no-repeat;
+    background-size: cover;
+    width: 35px;
+    height: 34px;
+    position: absolute;
+    top: 25px;
+    left: 16px;
+}
+span.admin_works-label_text{
+    @include Roboto-Regular();
+    font-size: 16px;
+    color: #0548be;
+    margin: 0;
+}

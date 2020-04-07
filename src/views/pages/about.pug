@@ -9,34 +9,35 @@ block content
             .works_header-icons
                 a(href='#')
                     svg.works_header-icons_item(width='32', height='28', viewBox="0 0 548.358 548.358")
-                        use(xlink:href='assets/styles/sprate.svg#vk')
+                        use(xlink:href='assets/images/sprate.svg#vk')
                 a(href='#')
                     svg.works_header-icons_item(width='27', height='23', viewBox="0 0 475.084 475.084")
-                        use(xlink:href='assets/styles/sprate.svg#github')
+                        use(xlink:href='assets/images/sprate.svg#github')
                 a(href='#')
                     svg.works_header-icons_item(width='27', height='20', viewBox="0 0 512 512")
-                        use(xlink:href='assets/styles/sprate.svg#linkedin')
+                        use(xlink:href='assets/images/sprate.svg#linkedin')
             .works_header-burger
                 img.works_header-hamburger(src="assets/images/hamburger.png", alt="hamburger")
         .works_user
             .works_user-stars
                 svg.works_user-icons_item(width="470px" height="270px" viewBox="0 0 186.861 110.966")
-                    use(xlink:href='assets/styles/sprate.svg#stars')
+                    use(xlink:href='assets/images/sprate.svg#stars')
                 .works_user-stars_avatar
                     .user_pic
                         img.user__pic-img
                     .user__description
                         .user__name Владимир Астахов
                         .user__ingo Личный сайт разработчика
-        a.works_down-scroll(href="")
-            svg.works_down-icons_item(width="35px" height="35px" viewBox="0 0 25.16 16.164")
-                use(xlink:href='assets/styles/sprate.svg#arrow-down')
+        .about_down-scroll_block
+            a.about_down-scroll(href="")
+                svg.works_down-icons_item(width="35px" height="35px" viewBox="0 0 25.16 16.164")
+                    use(xlink:href='assets/images/sprate.svg#arrow-down')
     section.about_title
         .about_user
             .about_user-title
                 svg.about_user-icons_item(width="230px" height="200px" viewBox="0 0 171.5 132.5")
-                    use(xlink:href='assets/styles/sprate.svg#starss')
-                h2.works_stars-title Обо мне
+                    use(xlink:href='assets/images/sprate.svg#starss')
+                h2.about_user-title Обо мне
             .about_user-block
                 .about_user-photo                    
                 .about_user-text
@@ -109,19 +110,26 @@ block content
                                 circle.circle.circle_above(cx="50" cy="50" r="40" style="animation-delay: -90s")
                             h4.about_skills-circle_name Bower
     section.about_map
-        .about_contact
-            h3.about_contact-text Контакты
-            ul.about_contact-items
-                li.about_contact-item
-                    .about_contact-icon_skype
-                    p.about_contact-item_skype skype_kdn
-                li.about_contact-item
-                    .about_contact-icon_phone
-                    p.about_contact-item_skype +7 931 200 93 24
-                li.about_contact-item
-                    .about_contact-icon_mail
-                    p.about_contact-item_skype astahov@gmail.com
-                li.about_contact-item
-                    .about_contact-icon_map
-                    p.about_contact-item_skype Новосибирск, ул.Инская, д.14
+        .about_contact-map_block
+            .about_contact
+                h3.about_contact-text Контакты
+                ul.about_contact-items
+                    li.about_contact-item
+                        .about_contact-icon_skype
+                            svg.about_contact-icons_map(width='45', height='45', viewBox="0 0 512 512")
+                                use(xlink:href='assets/images/sprate.svg#skype')
+                        p.about_contact-item_skype skype_kdn
+                    li.about_contact-item
+                        svg.about_contact-icons_phone(width='50', height='50')
+                            use(xlink:href='assets/images/sprate.svg#phone')
+                        p.about_contact-item_skype +7 931 200 93 24
+                    li.about_contact-item
+                        .about_contact-icon_skype
+                            svg.about_contact-icons_mail(width='50', height='50')
+                                use(xlink:href='assets/images/sprate.svg#mail')
+                        p.about_contact-item_skype astahov@gmail.com
+                    li.about_contact-item
+                        svg.about_contact-icons_mail(width='50', height='50')
+                            use(xlink:href='assets/images/sprate.svg#map_k')
+                        p.about_contact-item_skype Новосибирск, ул.Инская, д.14
         include ../common/footer.pug
